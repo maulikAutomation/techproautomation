@@ -1,100 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>MRTech Automation</title>
-  <meta name="description" content="MRTech Automation – Industrial Automation, Software Solutions, and Smart Technology Services" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <style>
+  <title>MR Tech Automation | Industrial Automation Solutions</title>
+  <meta name="description" content="MR Tech Automation provides PLC, SCADA, HMI, robotics, and industrial automation solutions." />  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  <style>
     :root {
-      --primary: #0f172a;
-      --secondary: #2563eb;
-      --accent: #38bdf8;
+      --primary: #0b5ed7;
+      --dark: #0f172a;
       --light: #f8fafc;
       --gray: #64748b;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      color: var(--primary);
-      background: white;
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--dark);
       line-height: 1.6;
     }
 
-    /* NAVBAR */
-    nav {
-      background: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo img {
-      height: 45px;
-      width: auto;
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 500;
-    }
-
-    /* HEADER */
     header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(120deg, #0b5ed7, #0ea5e9);
       color: white;
       padding: 80px 20px;
       text-align: center;
     }
 
-    .hero-logo {
-      height: 90px;
-      margin-bottom: 20px;
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.95; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 15px;
+      gap: 30px;
     }
 
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.95;
-    }
-
-    header a {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 28px;
-      background: var(--accent);
-      color: #000;
+    nav a {
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
+      color: var(--dark);
+      font-weight: 500;
     }
 
-    /* SECTIONS */
+    nav a:hover { color: var(--primary); }
+
     section {
-      padding: 70px 20px;
-      max-width: 1100px;
+      padding: 80px 20px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -108,181 +70,368 @@
       margin-bottom: 10px;
     }
 
-    .section-title p {
-      color: var(--gray);
-    }
+    .section-title p { color: var(--gray); }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
     }
 
     .card {
-      background: var(--light);
+      background: white;
       padding: 30px;
-      border-radius: 18px;
+      border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
-    }
+    .card:hover { transform: translateY(-6px); }
 
-    .card h3 {
-      margin-bottom: 10px;
-    }
+    .card h3 { margin-bottom: 10px; }
+    .card p { color: var(--gray); font-size: 0.95rem; }
 
-    .card p {
-      color: var(--gray);
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      align-items: center;
-    }
-
-    /* CONTACT */
-    .contact-box {
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
+    .cta {
+      background: var(--dark);
       color: white;
-      padding: 40px;
-      border-radius: 20px;
       text-align: center;
+      padding: 80px 20px;
+      border-radius: 20px;
     }
 
-    .contact-box a {
+    .cta h2 { font-size: 2.2rem; margin-bottom: 20px; }
+
+    .cta a {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 26px;
-      background: white;
-      color: var(--primary);
+      background: var(--primary);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
       text-decoration: none;
-      border-radius: 25px;
       font-weight: 600;
     }
 
-    /* FOOTER */
     footer {
-      background: var(--primary);
+      background: #020617;
       color: #cbd5f5;
-      padding: 40px 20px;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer p { font-size: 0.9rem; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+    }
+  </style></head>
+<body>  <header>
+    <h1>MR Tech Automation</h1>
+    <p>Smart Industrial Automation & Control Solutions</p>
+  </header>  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>  <section id="about">
+    <div class="section-title">
+      <h2>About MR Tech Automation</h2>
+      <p>Engineering-driven industrial automation specialists</p>
+    </div>
+    <p style="max-width:1000px;margin:auto;text-align:center;color:#475569;">
+      MR Tech Automation is a technically focused industrial automation company delivering fully custom control systems for process and discrete industries. We specialize in designing PLC architectures, developing control logic, building SCADA/HMI software from scratch, and integrating industrial networks with high reliability.
+      <br/><br/>
+      Our philosophy is simple: <strong>no black-box platforms, no vendor lock-in</strong>. Every system is engineered in-house to match the exact operational logic, performance, and expansion needs of the plant.
+    </p>
+  </section>  <section id="services">
+    <div class="section-title">
+      <h2>Engineering Services</h2>
+      <p>Deep technical automation capabilities</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>PLC Software Engineering</h3><p>Structured, scalable PLC programs using IEC 61131 standards including ladder, function block, and structured text.</p></div>
+      <div class="card"><h3>Custom SCADA & HMI</h3><p>In-house developed visualization systems with custom graphics, alarms, trends, historian, and role-based access.</p></div>
+      <div class="card"><h3>Control Panel Engineering</h3><p>Electrical schematics, panel layouts, IO mapping, BOM, FAT & commissioning support.</p></div>
+      <div class="card"><h3>Drives & Motion Control</h3><p>VFDs, servo systems, synchronized motion, and closed-loop control applications.</p></div>
+      <div class="card"><h3>Industrial Communication</h3><p>Design and implementation of deterministic and redundant industrial networks.</p></div>
+      <div class="card"><h3>System Commissioning</h3><p>On-site testing, loop checking, performance tuning, and plant handover documentation.</p></div>
+    </div>
+  </section>  <section id="solutions">
+    <div class="section-title">
+      <h2>Industry Solutions</h2>
+      <p>Custom automation engineered for real-world industries</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Manufacturing Automation</h3><p>End-to-end automation for discrete and continuous manufacturing lines including conveyors, assembly, and packaging.</p></div>
+      <div class="card"><h3>Pharma & FMCG</h3><p>Batch processes, recipe management, traceability, and compliance-focused automation systems.</p></div>
+      <div class="card"><h3>Water & Wastewater</h3><p>Automation for pumping stations, STP, WTP, and distribution networks with real-time monitoring.</p></div>
+      <div class="card"><h3>Energy & Utilities</h3><p>Power monitoring, energy management, and substation automation solutions.</p></div>
+      <div class="card"><h3>OEM Machine Automation</h3><p>Custom control software and electrical design for machine builders and OEMs.</p></div>
+      <div class="card"><h3>Retrofit & Upgrades</h3><p>Modernization of legacy PLC, HMI, and control systems without disrupting production.</p></div>
+    </div>
+  </section>  <section id="expertise">
+    <div class="section-title">
+      <h2>Technology Stack & Expertise</h2>
+      <p>Industrial-grade technologies engineered correctly</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>PLC Platforms</h3><p>Siemens (S7-1200/1500), Allen-Bradley ControlLogix & CompactLogix, Schneider M340/M580, Mitsubishi.</p></div>
+      <div class="card"><h3>Protocols</h3><p>Profinet, Profibus, Modbus TCP/IP, Ethernet/IP, OPC-UA, serial & custom protocol handling.</p></div>
+      <div class="card"><h3>SCADA Architecture</h3><p>Distributed systems, redundant servers, edge data acquisition, custom historians.</p></div>
+      <div class="card"><h3>Data & Logic Design</h3><p>Alarm management (ISA-18.2), trend optimization, interlocks, and fail-safe logic.</p></div>
+    </div>
+  </section>  <section id="methodology">
+    <div class="section-title">
+      <h2>Project Execution Methodology</h2>
+      <p>Structured engineering process for zero surprises</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Requirement Analysis</h3><p>Process understanding, IO definition, control philosophy, and network architecture.</p></div>
+      <div class="card"><h3>System Design</h3><p>PLC structure, SCADA architecture, panel design, and communication strategy.</p></div>
+      <div class="card"><h3>Development</h3><p>PLC coding, custom HMI/SCADA development, simulations, and internal testing.</p></div>
+      <div class="card"><h3>FAT & SAT</h3><p>Factory and Site Acceptance Testing with documented test cases.</p></div>
+      <div class="card"><h3>Commissioning</h3><p>Live system deployment, tuning, operator training, and handover.</p></div>
+      <div class="card"><h3>Support & Expansion</h3><p>Long-term maintenance, upgrades, and system scalability support.</p></div>
+    </div>
+  </section>  <section id="whyus">
+    <div class="section-title">
+      <h2>Why MR Tech Automation</h2>
+      <p>Not integrators of tools — builders of solutions</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>100% In-House Development</h3><p>No dependency on third-party SCADA platforms. Every solution is custom engineered.</p></div>
+      <div class="card"><h3>Vendor Neutral</h3><p>We work with Siemens, Allen-Bradley, Schneider, Mitsubishi and more — based on project needs.</p></div>
+      <div class="card"><h3>Future Ready</h3><p>Designed for scalability, cybersecurity, and Industry 4.0 readiness.</p></div>
+      <div class="card"><h3>Long-Term Support</h3><p>Lifecycle support from concept to commissioning and beyond.</p></div>
+    </div>
+  </section>  <section id="contact">
+    <div class="cta">
+      <h2>Let’s Automate Your Plant</h2>
+      <p>Get in touch for consultation and project discussion</p>
+      <a href="mailto:info@mrtechautomation.in">Contact Us</a>
+    </div>
+  </section>  <footer>
+    <p>© 2026 MR Tech Automation. All rights reserved.</p>
+  </footer></body>
+</html><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MR Tech Automation | Industrial Automation Solutions</title>
+  <meta name="description" content="MR Tech Automation provides PLC, SCADA, HMI, robotics, and industrial automation solutions." />  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  <style>
+    :root {
+      --primary: #0b5ed7;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(120deg, #0b5ed7, #0ea5e9);
+      color: white;
+      padding: 80px 20px;
       text-align: center;
     }
 
-    footer p {
-      font-size: 0.9rem;
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.95; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
     }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 15px;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--primary); }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p { color: var(--gray); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: translateY(-6px); }
+
+    .card h3 { margin-bottom: 10px; }
+    .card p { color: var(--gray); font-size: 0.95rem; }
+
+    .cta {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 20px;
+    }
+
+    .cta h2 { font-size: 2.2rem; margin-bottom: 20px; }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--primary);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5f5;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer p { font-size: 0.9rem; }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-logo {
-        height: 70px;
-      }
+      header h1 { font-size: 2.2rem; }
     }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="logo">
-      <img src="logo.png" alt="MRTech Automation Logo">
-    </div>
-    <div>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header>
-    <img src="logo.png" alt="MRTech Automation Logo" class="hero-logo">
-    <h1>Smart Automation & Software Solutions</h1>
-    <p>Empowering industries with reliable automation, testing, and digital solutions</p>
-    <a href="#contact">Get in Touch</a>
-  </header>
-
-  <!-- SERVICES -->
-  <section id="services">
+  </style></head>
+<body>  <header>
+    <h1>MR Tech Automation</h1>
+    <p>Smart Industrial Automation & Control Solutions</p>
+  </header>  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>  <section id="about">
     <div class="section-title">
-      <h2>Our Services</h2>
-      <p>High-quality solutions designed for performance and reliability</p>
+      <h2>About MR Tech Automation</h2>
+      <p>Engineering-driven industrial automation specialists</p>
     </div>
-
+    <p style="max-width:1000px;margin:auto;text-align:center;color:#475569;">
+      MR Tech Automation is a technically focused industrial automation company delivering fully custom control systems for process and discrete industries. We specialize in designing PLC architectures, developing control logic, building SCADA/HMI software from scratch, and integrating industrial networks with high reliability.
+      <br/><br/>
+      Our philosophy is simple: <strong>no black-box platforms, no vendor lock-in</strong>. Every system is engineered in-house to match the exact operational logic, performance, and expansion needs of the plant.
+    </p>
+  </section>  <section id="services">
+    <div class="section-title">
+      <h2>Engineering Services</h2>
+      <p>Deep technical automation capabilities</p>
+    </div>
     <div class="grid">
-      <div class="card">
-        <h3>Industrial Automation</h3>
-        <p>PLC, SCADA, HMI integration and custom automation solutions for modern industries.</p>
-      </div>
-      <div class="card">
-        <h3>Software Development</h3>
-        <p>Custom web, desktop, and automation software built to scale with your business.</p>
-      </div>
-      <div class="card">
-        <h3>Testing & QA</h3>
-        <p>Manual and automation testing services to ensure quality, performance, and security.</p>
-      </div>
-      <div class="card">
-        <h3>Data & Cloud Solutions</h3>
-        <p>Cloud integration, data logging, monitoring dashboards, and backup solutions.</p>
-      </div>
+      <div class="card"><h3>PLC Software Engineering</h3><p>Structured, scalable PLC programs using IEC 61131 standards including ladder, function block, and structured text.</p></div>
+      <div class="card"><h3>Custom SCADA & HMI</h3><p>In-house developed visualization systems with custom graphics, alarms, trends, historian, and role-based access.</p></div>
+      <div class="card"><h3>Control Panel Engineering</h3><p>Electrical schematics, panel layouts, IO mapping, BOM, FAT & commissioning support.</p></div>
+      <div class="card"><h3>Drives & Motion Control</h3><p>VFDs, servo systems, synchronized motion, and closed-loop control applications.</p></div>
+      <div class="card"><h3>Industrial Communication</h3><p>Design and implementation of deterministic and redundant industrial networks.</p></div>
+      <div class="card"><h3>System Commissioning</h3><p>On-site testing, loop checking, performance tuning, and plant handover documentation.</p></div>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
+  </section>  <section id="solutions">
     <div class="section-title">
-      <h2>About MRTech Automation</h2>
-      <p>Driven by technology, focused on results</p>
+      <h2>Industry Solutions</h2>
+      <p>Custom automation engineered for real-world industries</p>
     </div>
-
-    <div class="about">
-      <div>
-        <p>
-          MRTech Automation is a technology-driven company delivering innovative automation and
-          software solutions. We help businesses optimize processes, improve quality, and achieve
-          operational excellence through smart engineering.
-        </p>
-        <p>
-          Our team combines industrial automation expertise with modern software development to
-          deliver reliable and scalable solutions.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Why Choose Us?</h3>
-        <ul style="margin-top:10px; padding-left:18px; color:var(--gray)">
-          <li>Industry-focused solutions</li>
-          <li>Reliable & scalable systems</li>
-          <li>Modern technology stack</li>
-          <li>Customer-first approach</li>
-        </ul>
-      </div>
+    <div class="grid">
+      <div class="card"><h3>Manufacturing Automation</h3><p>End-to-end automation for discrete and continuous manufacturing lines including conveyors, assembly, and packaging.</p></div>
+      <div class="card"><h3>Pharma & FMCG</h3><p>Batch processes, recipe management, traceability, and compliance-focused automation systems.</p></div>
+      <div class="card"><h3>Water & Wastewater</h3><p>Automation for pumping stations, STP, WTP, and distribution networks with real-time monitoring.</p></div>
+      <div class="card"><h3>Energy & Utilities</h3><p>Power monitoring, energy management, and substation automation solutions.</p></div>
+      <div class="card"><h3>OEM Machine Automation</h3><p>Custom control software and electrical design for machine builders and OEMs.</p></div>
+      <div class="card"><h3>Retrofit & Upgrades</h3><p>Modernization of legacy PLC, HMI, and control systems without disrupting production.</p></div>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-box">
-      <h2>Let’s Work Together</h2>
-      <p>Have a project or requirement? Reach out to us today.</p>
-      <a href="mailto: contact@mrtechautomation.in">contact@mrtechautomation.in</a>
+  </section>  <section id="expertise">
+    <div class="section-title">
+      <h2>Technology Stack & Expertise</h2>
+      <p>Industrial-grade technologies engineered correctly</p>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 MRTech Automation. All rights reserved.</p>
-  </footer>
-
-</body>
+    <div class="grid">
+      <div class="card"><h3>PLC Platforms</h3><p>Siemens (S7-1200/1500), Allen-Bradley ControlLogix & CompactLogix, Schneider M340/M580, Mitsubishi.</p></div>
+      <div class="card"><h3>Protocols</h3><p>Profinet, Profibus, Modbus TCP/IP, Ethernet/IP, OPC-UA, serial & custom protocol handling.</p></div>
+      <div class="card"><h3>SCADA Architecture</h3><p>Distributed systems, redundant servers, edge data acquisition, custom historians.</p></div>
+      <div class="card"><h3>Data & Logic Design</h3><p>Alarm management (ISA-18.2), trend optimization, interlocks, and fail-safe logic.</p></div>
+    </div>
+  </section>  <section id="methodology">
+    <div class="section-title">
+      <h2>Project Execution Methodology</h2>
+      <p>Structured engineering process for zero surprises</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Requirement Analysis</h3><p>Process understanding, IO definition, control philosophy, and network architecture.</p></div>
+      <div class="card"><h3>System Design</h3><p>PLC structure, SCADA architecture, panel design, and communication strategy.</p></div>
+      <div class="card"><h3>Development</h3><p>PLC coding, custom HMI/SCADA development, simulations, and internal testing.</p></div>
+      <div class="card"><h3>FAT & SAT</h3><p>Factory and Site Acceptance Testing with documented test cases.</p></div>
+      <div class="card"><h3>Commissioning</h3><p>Live system deployment, tuning, operator training, and handover.</p></div>
+      <div class="card"><h3>Support & Expansion</h3><p>Long-term maintenance, upgrades, and system scalability support.</p></div>
+    </div>
+  </section>  <section id="whyus">
+    <div class="section-title">
+      <h2>Why MR Tech Automation</h2>
+      <p>Not integrators of tools — builders of solutions</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>100% In-House Development</h3><p>No dependency on third-party SCADA platforms. Every solution is custom engineered.</p></div>
+      <div class="card"><h3>Vendor Neutral</h3><p>We work with Siemens, Allen-Bradley, Schneider, Mitsubishi and more — based on project needs.</p></div>
+      <div class="card"><h3>Future Ready</h3><p>Designed for scalability, cybersecurity, and Industry 4.0 readiness.</p></div>
+      <div class="card"><h3>Long-Term Support</h3><p>Lifecycle support from concept to commissioning and beyond.</p></div>
+    </div>
+  </section>  <section id="contact">
+    <div class="cta">
+      <h2>Let’s Automate Your Plant</h2>
+      <p>Get in touch for consultation and project discussion</p>
+      <a href="mailto:info@mrtechautomation.in">Contact Us</a>
+    </div>
+  </section>  <footer>
+    <p>© 2026 MR Tech Automation. All rights reserved.</p>
+  </footer></body>
 </html>
