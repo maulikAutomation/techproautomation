@@ -192,7 +192,7 @@
 </header><nav>
   <div class="nav-container">
     <strong>MR Tech Automation</strong>
-    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -256,5 +256,19 @@
   </div>
 </section><footer>
   <p>© 2026 MR Tech Automation. All rights reserved.</p>
-</footer></body>
+</footer><script>
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+  // Close menu after clicking a link (mobile UX fix)
+  document.querySelectorAll('nav ul a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+    });
+  });
+</script></body>
 </html>
