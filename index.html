@@ -51,6 +51,57 @@
       z-index: 1000;
     }
 
+    nav .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--primary); }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
     nav ul {
       display: flex;
       justify-content: center;
@@ -139,13 +190,17 @@
   <h1>MR Tech Automation</h1>
   <p>Industrial Automation | PLC | SCADA | LabVIEW | Custom Engineering</p>
 </header><nav>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#solutions">Solutions</a></li>
-    <li><a href="#expertise">Expertise</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div class="nav-container">
+    <strong>MR Tech Automation</strong>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav><section id="about">
   <div class="section-title">
     <h2>About MR Tech Automation</h2>
