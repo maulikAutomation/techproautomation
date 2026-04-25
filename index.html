@@ -1,285 +1,192 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <title>MR Tech Automation | PLC, SCADA, LabVIEW & Industrial Automation Experts</title>
-  <meta name="description" content="MR Tech Automation is an industrial automation engineering company delivering PLC, SCADA, HMI, LabVIEW, DAQ and fully custom in-house automation solutions." />  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  <!-- Organization Schema -->  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MR Tech Automation",
-    "url": "https://mrtechautomation.in/",
-    "description": "Industrial automation engineering company specializing in PLC programming, SCADA & HMI systems, LabVIEW-based automation, DAQ, and fully custom in-house control solutions.",
-    "areaServed": { "@type": "Country", "name": "India" },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "sales",
-      "email": "info@mrtechautomation.in"
-    }
-  }
-  </script>  <style>
-    :root {
-      --primary: #0b5ed7;
-      --dark: #0f172a;
-      --light: #f8fafc;
-      --gray: #64748b;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.7;
-    }
-
-    header {
-      background: linear-gradient(120deg, #0b5ed7, #0ea5e9);
-      color: white;
-      padding: 90px 20px;
-      text-align: center;
-    }
-
-    header h1 { font-size: 3rem; margin-bottom: 12px; }
-    header p { font-size: 1.2rem; opacity: 0.95; }
-
-    nav {
-  position: sticky;
-  top: 0;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  z-index: 1000;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 20px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 28px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav ul {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: white;
-    flex-direction: column;
-    gap: 0;
-    display: none;
-    border-top: 1px solid #e5e7eb;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li {
-    padding: 14px 20px;
-    border-bottom: 1px solid #e5e7eb;
-  }
-}
-
-      nav ul.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR Tech Automation | Premium Industrial Automation Solutions</title>
+    <meta name="description" content="MR Tech Automation delivers high-end industrial automation, PLC programming, SCADA systems, and LabVIEW solutions for manufacturing, pharma, and energy sectors.">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="MR Tech Automation | Industrial Excellence">
+    <meta property="og:description" content="Technical experts in PLC, SCADA, and Custom Engineering.">
+    <meta property="og:image" content="images/hero.png">
+    <meta property="og:url" content="https://mrtechautomation.in/">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MR Tech Automation",
+      "url": "https://mrtechautomation.in/",
+      "logo": "https://mrtechautomation.in/logo.png",
+      "description": "Industrial automation engineering company specializing in PLC programming, SCADA & HMI systems, and LabVIEW solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gujarat",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "info@mrtechautomation.in"
       }
     }
+    </script>
+    
+    <!-- Fonts & CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-gradient">MR TECH</span> AUTOMATION
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 15px;
-      gap: 30px;
-    }
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg">
+            <img src="images/hero.png" alt="Futuristic Industrial Control Room">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">Pioneering Industrial Intelligence</span>
+                <h1>Engineering the <span class="text-gradient">Future of Automation</span></h1>
+                <p>We deliver technically advanced PLC, SCADA, and LabVIEW-based control systems precisely engineered for reliability, scalability, and performance.</p>
+                <div class="hero-btns">
+                    <a href="services.html" class="btn btn-primary">Our Expertise</a>
+                    <a href="contact.html" class="btn btn-outline">Start a Project</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    nav a {
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: 500;
-    }
+    <!-- Core Expertise Preview -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-60">
+                <h2 style="font-size: 2.5rem;" class="mb-16">Technical <span class="text-gradient">Expertise</span></h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">We don't just build systems; we engineer solutions that transform industrial operations through precision logic and real-time intelligence.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card glass">
+                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>PLC Software Engineering</h3>
+                    <p>Structured, scalable PLC code following IEC 61131 standards for Siemens, Allen-Bradley, and more.</p>
+                </div>
+                <div class="card glass">
+                    <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Custom SCADA & HMI</h3>
+                    <p>Intuitive visualization systems with advanced alarming, historization, and secure remote access.</p>
+                </div>
+                <div class="card glass">
+                    <div class="card-icon"><i class="fas fa-vial"></i></div>
+                    <h3>LabVIEW Automation</h3>
+                    <p>High-performance DAQ and validation systems for R&D, testing benches, and quality control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    nav a:hover { color: var(--primary); }
+    <!-- Solutions Preview -->
+    <section class="section-padding" style="background: var(--surface);">
+        <div class="container">
+            <div class="flex-group">
+                <div>
+                    <img src="images/solutions.png" alt="Industrial Production Line" class="image-rounded">
+                </div>
+                <div>
+                    <h2 style="font-size: 2.5rem;" class="mb-24">Built for <span class="text-gradient">Every Industry</span></h2>
+                    <p style="color: var(--text-muted);" class="mb-32">From high-speed pharmaceutical lines to complex water treatment plants, our automation solutions are designed to meet the unique challenges of your sector.</p>
+                    <ul class="mb-40">
+                        <li style="margin-bottom: 16px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                            Manufacturing & Discrete Automation
+                        </li>
+                        <li style="margin-bottom: 16px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                            Pharma & FMCG Compliance
+                        </li>
+                        <li style="margin-bottom: 16px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                            Energy & Utility Management
+                        </li>
+                    </ul>
+                    <a href="solutions.html" class="btn btn-outline">Explore All Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+    <!-- CTA -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="glass" style="padding: 80px 40px; text-align: center;">
+                <h2 style="font-size: 3rem; margin-bottom: 24px;">Ready to <span class="text-gradient">Automate?</span></h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 40px;">Let’s discuss how our engineering expertise can drive efficiency and reliability in your plant.</p>
+                <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">
+                        <span class="text-gradient">MR TECH</span> AUTOMATION
+                    </a>
+                    <p>Technically focused industrial automation specialists delivering 100% in-house engineering solutions for global industries.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">PLC Programming</a></li>
+                        <li><a href="services.html">SCADA & HMI</a></li>
+                        <li><a href="services.html">LabVIEW Systems</a></li>
+                        <li><a href="services.html">Control Panels</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@mrtechautomation.in</li>
+                        <li><i class="fas fa-location-dot"></i> Gujarat, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MR Tech Automation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    .section-title h2 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    .section-title p { color: var(--gray); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .card h3 { margin-bottom: 10px; }
-    .card p { color: var(--gray); font-size: 0.95rem; }
-
-    .cta {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      border-radius: 20px;
-    }
-
-    .cta h2 { font-size: 2.2rem; margin-bottom: 20px; }
-
-    .cta a {
-      display: inline-block;
-      margin-top: 20px;
-      background: var(--primary);
-      color: white;
-      padding: 14px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer {
-      background: #020617;
-      color: #cbd5f5;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 60px;
-    }
-
-    footer p { font-size: 0.9rem; }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2rem; }
-    }
-  </style></head><body><header>
-  <h1>MR Tech Automation</h1>
-  <p>Industrial Automation | PLC | SCADA | LabVIEW | Custom Engineering</p>
-</header><nav>
-  <div class="nav-container">
-    <strong>MR Tech Automation</strong>
-    <div class="menu-toggle" id="menuToggle">☰</div>
-    <ul id="navMenu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#solutions">Solutions</a></li>
-      <li><a href="#expertise">Expertise</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav><section id="about">
-  <div class="section-title">
-    <h2>About MR Tech Automation</h2>
-    <p>Engineering-driven industrial automation specialists</p>
-  </div>
-  <p style="max-width:1000px;margin:auto;text-align:center;color:#475569;">
-    MR Tech Automation is a technically focused industrial automation company delivering fully custom control systems for process and discrete industries. We specialize in PLC software engineering, SCADA and HMI development, LabVIEW-based automation, industrial networking, and system commissioning.
-    <br/><br/>
-    Our approach is simple: <strong>100% in-house engineering</strong>. No generic platforms, no vendor lock-in — only systems designed precisely for plant logic, performance, reliability, and future scalability.
-  </p>
-</section><section id="services">
-  <div class="section-title">
-    <h2>Engineering Services</h2>
-    <p>Deep technical automation capabilities</p>
-  </div>
-  <div class="grid">
-    <div class="card"><h3>PLC Software Engineering</h3><p>Structured PLC programs using IEC 61131 standards with scalable and maintainable architectures.</p></div>
-    <div class="card"><h3>Custom SCADA & HMI</h3><p>Fully in-house SCADA and HMI development with alarms, trends, historian, and secure access control.</p></div>
-    <div class="card"><h3>Control Panel Engineering</h3><p>Electrical design, schematics, IO mapping, BOM, FAT and commissioning support.</p></div>
-    <div class="card"><h3>Drives & Motion Control</h3><p>VFDs, servo systems, synchronized motion and closed-loop control solutions.</p></div>
-    <div class="card"><h3>Industrial Communication</h3><p>Design and implementation of Profinet, Modbus, Ethernet/IP, OPC-UA and redundant networks.</p></div>
-    <div class="card"><h3>Commissioning & Support</h3><p>On-site testing, tuning, operator training and long-term lifecycle support.</p></div>
-  </div>
-</section><section id="solutions">
-  <div class="section-title">
-    <h2>Industry Solutions</h2>
-    <p>Automation engineered for real-world industries</p>
-  </div>
-  <div class="grid">
-    <div class="card"><h3>Manufacturing Automation</h3><p>Automation for conveyors, assembly lines, packaging and process control systems.</p></div>
-    <div class="card"><h3>Pharma & FMCG</h3><p>Batch control, recipe management, traceability and compliance-driven automation.</p></div>
-    <div class="card"><h3>Water & Wastewater</h3><p>Pumping stations, STP, WTP automation with real-time monitoring.</p></div>
-    <div class="card"><h3>Energy & Utilities</h3><p>Power monitoring, energy management and substation automation.</p></div>
-    <div class="card"><h3>OEM Machine Automation</h3><p>Custom PLC and SCADA solutions for machine builders and OEMs.</p></div>
-    <div class="card"><h3>Retrofit & Upgrades</h3><p>Modernization of legacy PLC, HMI and SCADA systems.</p></div>
-  </div>
-</section><section id="expertise">
-  <div class="section-title">
-    <h2>Technology Stack & Expertise</h2>
-    <p>Engineering-grade tools selected for performance</p>
-  </div>
-  <div class="grid">
-    <div class="card"><h3>PLC Platforms</h3><p>Siemens, Allen-Bradley, Schneider, Mitsubishi and vendor-neutral architectures.</p></div>
-    <div class="card"><h3>Industrial Protocols</h3><p>Profinet, Profibus, Modbus TCP/IP, Ethernet/IP, OPC-UA.</p></div>
-    <div class="card"><h3>LabVIEW Automation</h3><p>Advanced LabVIEW development for test benches, DAQ systems and validation rigs.</p></div>
-    <div class="card"><h3>Control Philosophy</h3><p>Interlocks, sequencing, alarms (ISA-18.2) and fail-safe logic design.</p></div>
-  </div>
-</section><section id="contact">
-  <div class="cta">
-    <h2>Let’s Automate Your Plant</h2>
-    <p>Discuss your automation requirements with our engineering team</p>
-    <a href="mailto:info@mrtechautomation.in">Contact Us</a>
-  </div>
-</section><footer>
-  <p>© 2026 MR Tech Automation. All rights reserved.</p>
-</footer><script>
-  const toggleBtn = document.getElementById('menuToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-    });
-  });
-</script></body>
+    <script src="js/main.js"></script>
+</body>
 </html>
