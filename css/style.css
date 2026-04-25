@@ -22,8 +22,9 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -31,7 +32,6 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -165,12 +165,13 @@ nav.scrolled {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: var(--nav-height);
+  padding-top: calc(var(--nav-height) + 40px);
+  padding-bottom: 60px;
 }
 
 .hero-bg {
@@ -401,7 +402,7 @@ footer {
   .menu-toggle { display: block; }
   .hero h1 { font-size: 2.8rem; }
   .section-padding { padding: 80px 0; }
-  .container { padding: 0 24px; }
+  .container { padding: 0 20px; }
   
   .hero {
     text-align: center;
@@ -410,6 +411,14 @@ footer {
   .hero-content {
     margin: 0 auto;
   }
+
+  .flex-group {
+    gap: 30px;
+  }
+  
+  .footer-grid {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -417,4 +426,6 @@ footer {
   .section-padding { padding: 60px 0; }
   .btn { width: 100%; text-align: center; }
   .hero-btns { display: flex; flex-direction: column; gap: 16px; }
+  .container { padding: 0 15px; }
+  .flex-group { gap: 20px; }
 }
