@@ -26,8 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       
       // Extract form data
-      const name = contactForm.querySelector('input[type="text"]').value;
-      const email = contactForm.querySelector('input[type="email"]').value;
+      const company = contactForm.querySelector('#company').value;
+      const name = contactForm.querySelector('#name').value;
+      const email = contactForm.querySelector('#email').value;
+      const phone = contactForm.querySelector('#phone').value;
       const subject = contactForm.querySelector('select').value;
       const message = contactForm.querySelector('textarea').value;
 
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.disabled = true;
 
       // Construct mailto link
-      const mailtoLink = `mailto:info@mrtechautomation.in?subject=Website Inquiry: ${subject}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      const mailtoLink = `mailto:info@mrtechautomation.in?subject=Website Inquiry: ${subject}&body=Company: ${company}%0D%0AName: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`;
       
       setTimeout(() => {
         window.location.href = mailtoLink;

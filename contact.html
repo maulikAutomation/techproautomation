@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | MR Tech Automation</title>
-    <meta name="description" content="Get in touch with MR Tech Automation for your industrial automation needs. PLC, SCADA, and custom engineering experts.">
+    <title>Contact Us | MRTech Automation</title>
+    <meta name="description" content="Get in touch with MRTech Automation for your industrial automation needs. PLC, SCADA, and custom engineering experts.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,7 +13,7 @@
     <nav>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <span class="text-gradient">MR TECH</span> AUTOMATION
+                <span class="text-gradient">MRTech</span> AUTOMATION
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -22,6 +22,12 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
+            <div class="nav-info">
+                <a href="mailto:info@mrtechautomation.in">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@mrtechautomation.in</span>
+                </a>
+            </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -30,6 +36,9 @@
 
     <!-- Page Hero -->
     <header class="hero" style="min-height: 40vh; padding-top: calc(var(--nav-height) + 60px);">
+        <div class="hero-bg">
+            <img src="images/hero.png" alt="Engineering Contact Background">
+        </div>
         <div class="container">
             <div class="hero-content" style="text-align: center; margin: 0 auto;">
                 <span class="hero-tag">Let's Connect</span>
@@ -47,12 +56,20 @@
                 <div class="glass" style="padding: 40px;">
                     <form id="contactForm">
                         <div style="margin-bottom: 24px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">Company Name</label>
+                            <input type="text" id="company" placeholder="Your Company Name" required>
+                        </div>
+                        <div style="margin-bottom: 24px;">
                             <label style="display: block; margin-bottom: 8px; font-weight: 500;">Full Name</label>
-                            <input type="text" placeholder="John Doe" required>
+                            <input type="text" id="name" placeholder="Your Full Name" required>
                         </div>
                         <div style="margin-bottom: 24px;">
                             <label style="display: block; margin-bottom: 8px; font-weight: 500;">Work Email</label>
-                            <input type="email" placeholder="john@company.com" required>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div style="margin-bottom: 24px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">Contact No</label>
+                            <input type="tel" id="phone" placeholder="Your Number" required>
                         </div>
                         <div style="margin-bottom: 24px;">
                             <label style="display: block; margin-bottom: 8px; font-weight: 500;">Subject</label>
@@ -119,7 +136,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <a href="index.html" class="logo" style="margin-bottom: 20px; display: block;">
-                        <span class="text-gradient">MR TECH</span> AUTOMATION
+                        <span class="text-gradient">MRTech</span> AUTOMATION
                     </a>
                     <p>Technically focused industrial automation specialists delivering 100% in-house engineering solutions for global industries.</p>
                 </div>
@@ -150,7 +167,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 MR Tech Automation. All rights reserved.</p>
+                <p>&copy; 2026 MRTech Automation. All rights reserved.</p>
             </div>
         </div>
     </footer>
