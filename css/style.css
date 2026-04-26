@@ -270,12 +270,15 @@ nav.scrolled {
 
 /* Cards */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 
 .card {
+  flex: 1 1 350px;
+  max-width: 400px;
   padding: 40px;
   transition: var(--transition);
 }
