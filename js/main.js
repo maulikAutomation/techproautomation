@@ -35,23 +35,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const btn = contactForm.querySelector('button');
       const originalText = btn.textContent;
-      btn.textContent = 'Opening Email App...';
+      btn.textContent = 'Sending Message...';
       btn.disabled = true;
 
-      // Construct mailto link
-      const mailtoLink = `mailto:info@mrtechautomation.in?subject=Website Inquiry: ${subject}&body=Company: ${company}%0D%0AName: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-      
-      setTimeout(() => {
-        window.location.href = mailtoLink;
-        btn.textContent = 'Email App Opened';
-        btn.style.background = 'var(--accent)';
-        
+      // Google Apps Script Web App URL
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzFcjCRsfh_tNEsbV_YASeY1RzjGbLNovNaJp0-tV7v680tO_9rkV93rxTK0i9279J8/exec';
+
+      const formData = {
+        company: company,
+        name: name,
+        email: email,
+        phone: phone,
+        subject: subject,
+        message: message
+      };
+
+      fetch(scriptURL, {
+        method: 'POST',
+        // Using text/plain to avoid CORS preflight issues with Google Apps Script
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if(data.result === "success") {
+          btn.textContent = 'Message Sent Successfully!';
+          btn.style.background = 'var(--accent)';
+          contactForm.reset();
+        } else {
+          btn.textContent = 'Error Sending Message';
+          btn.style.background = 'red';
+        }
         setTimeout(() => {
           btn.textContent = originalText;
           btn.style.background = 'var(--primary)';
           btn.disabled = false;
-        }, 3000);
-      }, 1000);
+        }, 4000);
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        btn.textContent = 'Error Sending Message';
+        btn.style.background = 'red';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = 'var(--primary)';
+          btn.disabled = false;
+        }, 4000);
+      });
     });
   }
 });
